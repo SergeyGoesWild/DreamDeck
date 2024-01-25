@@ -1,26 +1,25 @@
-import { useEffect } from 'react'
-import './App.css'
-import Header from './components/Header';
+import { useEffect } from "react";
+import "./App.css";
+import Header from "./components/Header";
 
 function App() {
-
   const url = "https://api.tcgdex.net/v2/en/cards";
 
   useEffect(() => {
     fetch(url)
-      .then(response => {
+      .then((response) => {
         return response.json();
       })
-      .then(result => {
+      .then((result) => {
         console.log(result);
-      })
+      });
   }, []);
 
   return (
     <>
       <Header />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
