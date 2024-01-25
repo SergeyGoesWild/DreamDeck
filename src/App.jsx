@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import FooterComponent from "../component/footer/footerComponent";
 import "./App.css";
 import "./Responsive.css";
+import Header from './components/Header';
 
 function App() {
   const url = "https://api.tcgdex.net/v2/en/cards";
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <>
+      <Header />
       <FooterComponent />
     </>
   );
