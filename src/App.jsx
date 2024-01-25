@@ -19,11 +19,7 @@ function App() {
 
   return (
     <>
-
-      
-
-        <FooterComponent />
-
+    <FooterComponent />
     </>
   )
 }
