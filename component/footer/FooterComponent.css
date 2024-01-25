@@ -1,20 +1,25 @@
-/* *** ************************************************************************************* *** */
-/* *** * Medium devices (landscape tablets, 768px and up) ********************************** *** */
-/* *** ************************************************************************************* *** */
-@media only screen and (min-width: 768px) {
-
-    /* *** ************************************************************************************* *** */
-    /* *** * footer **************************************************************************** *** */
-    /* *** ************************************************************************************* *** */
+footer {
+    display: none;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    footer {
+      display: block;
+      background-color: var(--footer-background-color);
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
     
-    .FooterContentContainer {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: nowrap;
+    .footerContentContainer {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
 
         h3 {
-            color: black;
+            color: var(--text-color);
             margin: 10px;
         }
     }
   }
+
