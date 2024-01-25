@@ -1,0 +1,41 @@
+.header {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo-header {
+    flex: 1;
+}
+
+.menu-icon {
+    align-self: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 300%;
+    border: 1px solid #ccc;
+}
+
+.dropdown {
+    position: relative;
+    align-self: center;
+}
+
+.dropdown-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+@media screen and (min-width: 720px) {
+    .menu-icon {
+        display: none;
+    }
+
+    .dropdown {
+        display: none;
+    }
+}
