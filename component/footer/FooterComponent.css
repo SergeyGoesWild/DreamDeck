@@ -2,15 +2,16 @@ footer {
     display: none;
   }
   
-  @media only screen and (min-width: 768px) {
-    footer {
-      display: block;
-      background-color: var(--footer-background-color);
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
+@media only screen and (min-width: 768px) {
     
+    footer {
+        display: block;
+        background-color: var(--footer-background-color);
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
     .footerContentContainer {
         display: flex;
         justify-content: space-evenly;
@@ -21,5 +22,5 @@ footer {
             margin: 10px;
         }
     }
-  }
+}
 
