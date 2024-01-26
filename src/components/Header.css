@@ -1,6 +1,5 @@
 .header {
   display: flex;
-  flex-direction: row;
 }
 
 .logo-header {
@@ -15,8 +14,7 @@
   position: absolute;
   top: 100%;
   right: 0;
-  width: 300%;
-  border: 1px solid #ccc;
+  border: 1px solid var(--dropdown-outline);
 }
 
 .dropdown {
