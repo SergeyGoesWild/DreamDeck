@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
-import SearchInput from "./SearchInput";
-import CardList from './Cardlist';
-import CardListBox from './CardListBox';
-import DeckSection from './DeckSection';
+import SearchInput from "../searchsystem/SearchInput";
+import CardList from '../cardsystem/CardList';
+import CardListBox from '../cardsystem/CardListBox';
+import DeckSection from '../decksection/DeckSection';
+import "./MainBody.css";
 
 
 const mainbody = ({ searchTerm, onSearchChange, cards }) => {

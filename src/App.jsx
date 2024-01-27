@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Header from "./components/Header";
-import FooterComponent from "./components/FooterComponent";
-import MainBody from "./components/MainBody";
+import FooterComponent from "./components/footercomponent/FooterComponent";
+import MainBody from "./components/mainbody/MainBody";
 import useInfiniteScroll from "./components/infinitescroll/useInfiniteScroll";
 import "./App.css";
 

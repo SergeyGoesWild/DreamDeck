@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import CardBox from "./CardBox";
 
-const CardListBox = ({ cards}) => {
+const CardListBox = ({cards}) => {
   return (
-    <div className="card-container">
+    <div className="cardbox-container">
       {cards.map((card) => (
         <CardBox key={card.id} card={card} />
       ))}
