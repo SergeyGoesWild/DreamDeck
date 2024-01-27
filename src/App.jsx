@@ -1,25 +1,69 @@
-import { useEffect } from "react";
-import FooterComponent from "../component/footer/footerComponent";
+import { useState, useEffect } from "react";
+import Header from "./components/Header";
+import FooterComponent from "./components/FooterComponent";
+import CardSearchDisplay from "./components/CardSearchDisplay";
+import useInfiniteScroll from "./components/useInfiniteScroll";
 import "./App.css";
-import "./Responsive.css";
-import Header from './components/Header';
+
+const url = "https://api.tcgdex.net/v2/en/cards";
+const batchSize = 100;
 
 function App() {
-  const url = "https://api.tcgdex.net/v2/en/cards";
+  const [data, setData] = useState({ cards: [], loading: true, error: null });
+  const [searchTerm, setSearchTerm] = useState("");
+  const [displayedCards, setDisplayedCards] = useState([]);
 
   useEffect(() => {
     fetch(url)
-      .then((response) => {
-        return response.json();
-      })
+      .then((response) => response.json())
       .then((result) => {
-        console.log(result);
-      });
+        const cardsWithImages = result
+          .filter((card) => card.image)
+          .map((card) => ({
+            ...card,
+            image: `${card.image}/low.webp`,
+          }));
+        setData({ cards: cardsWithImages, loading: false });
+        console.log(result); // a retirer
+      })
+      .catch((error) => setData({ ...data, loading: false, error }));
   }, []);
+
+  useEffect(() => {
+    const filteredCards = data.cards
+      .filter((card) =>
+        card.name.toLowerCase().includes(searchTerm.toLowerCase()),
+      )
+      .slice(0, batchSize);
+    setDisplayedCards(filteredCards);
+  }, [searchTerm, data.cards]);
+
+  const loadMoreCards = () => {
+    const newCards = data.cards
+      .filter((card) =>
+        card.name.toLowerCase().includes(searchTerm.toLowerCase()),
+      )
+      .slice(displayedCards.length, displayedCards.length + batchSize);
+    setDisplayedCards((prev) => [...prev, ...newCards]);
+  };
+
+  useInfiniteScroll(loadMoreCards);
+
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  if (data.loading) return <div>Loading...</div>;
+  if (data.error) return <div>Error loading data.</div>;
 
   return (
     <>
       <Header />
+      <CardSearchDisplay
+        searchTerm={searchTerm}
+        onSearchChange={handleSearchChange}
+        cards={displayedCards}
+      />
       <FooterComponent />
     </>
   );
