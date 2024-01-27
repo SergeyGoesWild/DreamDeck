@@ -12,7 +12,6 @@ Card.propTypes = {
   card: PropTypes.shape({
     image: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    // other card properties if necessary
   }).isRequired,
 };
 
