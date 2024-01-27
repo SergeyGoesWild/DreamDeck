@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
 import SearchInput from "../searchsystem/SearchInput";
-import CardList from '../cardsystem/CardList';
-import CardListBox from '../cardsystem/CardListBox';
+import CardList from '../cardsystem/cardImg/CardList.jsx';
+import CardListBox from '../cardsystem/cardboxName/CardListBox';
 import DeckSection from '../decksection/DeckSection';
 import "./MainBody.css";
 
 
-const mainbody = ({ searchTerm, onSearchChange, cards }) => {
+const MainBody = ({ searchTerm, onSearchChange, cards }) => {
   return (
 
   <div>
@@ -23,7 +23,7 @@ const mainbody = ({ searchTerm, onSearchChange, cards }) => {
   );
 };
 
-mainbody.propTypes = {
+MainBody.propTypes = {
   searchTerm: PropTypes.string.isRequired,
   onSearchChange: PropTypes.func.isRequired,
   cards: PropTypes.arrayOf(
@@ -37,4 +37,4 @@ mainbody.propTypes = {
 
 };
 
-export default mainbody;
+export default MainBody;
