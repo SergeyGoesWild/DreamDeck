@@ -1,25 +1,25 @@
 import PropTypes from "prop-types";
 import SearchInput from "../searchsystem/SearchInput";
-import CardList from '../cardsystem/cardImg/CardList.jsx';
-import CardListBox from '../cardsystem/cardboxName/CardListBox';
-import DeckSection from '../decksection/DeckSection';
+import CardList from "../cardsystem/cardImg/CardList.jsx";
+import CardListBox from "../cardsystem/cardboxName/CardListBox";
+import DeckSection from "../decksection/DeckSection";
 import "./MainBody.css";
-
 
 const MainBody = ({ searchTerm, onSearchChange, cards }) => {
   return (
-
-  <div>
-    <div className="mainbody-container">
-      <div>
-        <SearchInput searchTerm={searchTerm} onSearchChange={onSearchChange} />
-        <CardListBox cards={cards} />
+    <div>
+      <div className="mainbody-container">
+        <div>
+          <SearchInput
+            searchTerm={searchTerm}
+            onSearchChange={onSearchChange}
+          />
+          <CardListBox cards={cards} />
+        </div>
+        <CardList cards={cards} />
+        <DeckSection />
       </div>
-      <CardList cards={cards} />
-      <DeckSection />
     </div>
-  </div>
-
   );
 };
 
@@ -34,7 +34,6 @@ MainBody.propTypes = {
       // other card properties if necessary
     }),
   ).isRequired,
-
 };
 
 export default MainBody;
