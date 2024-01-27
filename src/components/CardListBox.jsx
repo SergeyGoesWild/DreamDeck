@@ -1,0 +1,25 @@
+import PropTypes from "prop-types";
+import CardBox from "./CardBox";
+
+const CardListBox = ({ cards}) => {
+  return (
+    <div className="card-container">
+      {cards.map((card) => (
+        <CardBox key={card.id} card={card} />
+      ))}
+    </div>
+  );
+};
+
+CardListBox.propTypes = {
+  cards: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      image: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      // other card properties if necessary
+    }),
+  ).isRequired,
+};
+
+export default CardListBox;

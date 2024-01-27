@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import FooterComponent from "./components/FooterComponent";
-import CardSearchDisplay from "./components/CardSearchDisplay";
+import MainBody from "./components/MainBody";
 import useInfiniteScroll from "./components/useInfiniteScroll";
 import "./App.css";
 
@@ -59,7 +59,7 @@ function App() {
   return (
     <>
       <Header />
-      <CardSearchDisplay
+      <MainBody
         searchTerm={searchTerm}
         onSearchChange={handleSearchChange}
         cards={displayedCards}

@@ -1,13 +1,26 @@
 import PropTypes from "prop-types";
 import SearchInput from "./SearchInput";
 import CardList from './Cardlist';
+import DeckSection from './DeckSection';
+
 
 const CardSearchDisplay = ({ searchTerm, onSearchChange, cards }) => {
   return (
-    <div>
-      <SearchInput searchTerm={searchTerm} onSearchChange={onSearchChange} />
-      <CardList cards={cards} />
+
+  <div>
+    <div className="mainbody-container">
+      <div>
+        <SearchInput searchTerm={searchTerm} onSearchChange={onSearchChange} />          
+          <div>
+            <CardList cards={cards} />
+          </div>
+      </div>
+      <div>
+        <DeckSection />
+      </div>
     </div>
+  </div>
+
   );
 };
 
@@ -22,6 +35,7 @@ CardSearchDisplay.propTypes = {
       // other card properties if necessary
     }),
   ).isRequired,
+
 };
 
 export default CardSearchDisplay;
