@@ -19,7 +19,7 @@
   height: 200px;
   display: block;
 }
-.cardbox-container {
+.cardbox {
   display: none;
 }
 .search-container {
@@ -46,7 +46,7 @@
       margin: 10px;
     }
   }
-  .cardbox-container {
+  .cardbox {
     display: block;
   }
   .searchresult-container {

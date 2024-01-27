@@ -1,30 +1,28 @@
 import PropTypes from "prop-types";
 import SearchInput from "./SearchInput";
 import CardList from './Cardlist';
+import CardListBox from './CardListBox';
 import DeckSection from './DeckSection';
 
 
-const CardSearchDisplay = ({ searchTerm, onSearchChange, cards }) => {
+const mainbody = ({ searchTerm, onSearchChange, cards }) => {
   return (
 
   <div>
     <div className="mainbody-container">
       <div>
-        <SearchInput searchTerm={searchTerm} onSearchChange={onSearchChange} />          
-          <div>
-            <CardList cards={cards} />
-          </div>
+        <SearchInput searchTerm={searchTerm} onSearchChange={onSearchChange} />
+        <CardListBox cards={cards} />
       </div>
-      <div>
-        <DeckSection />
-      </div>
+      <CardList cards={cards} />
+      <DeckSection />
     </div>
   </div>
 
   );
 };
 
-CardSearchDisplay.propTypes = {
+mainbody.propTypes = {
   searchTerm: PropTypes.string.isRequired,
   onSearchChange: PropTypes.func.isRequired,
   cards: PropTypes.arrayOf(
@@ -38,4 +36,4 @@ CardSearchDisplay.propTypes = {
 
 };
 
-export default CardSearchDisplay;
+export default mainbody;

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import FooterComponent from "./components/FooterComponent";
 import MainBody from "./components/MainBody";
-import useInfiniteScroll from "./components/useInfiniteScroll";
+import useInfiniteScroll from "./components/infinitescroll/useInfiniteScroll";
 import "./App.css";
 
 const url = "https://api.tcgdex.net/v2/en/cards";
