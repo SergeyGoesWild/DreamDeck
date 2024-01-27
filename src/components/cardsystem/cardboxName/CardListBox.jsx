@@ -17,7 +17,6 @@ CardListBox.propTypes = {
       id: PropTypes.string.isRequired,
       image: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
-      // other card properties if necessary
     }),
   ).isRequired,
 };

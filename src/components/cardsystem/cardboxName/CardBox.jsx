@@ -8,12 +8,10 @@ const CardBox = ({ card }) => {
   );
 };
 
-console.log(CardBox);
 CardBox.propTypes = {
   card: PropTypes.shape({
     image: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    // other card properties if necessary
   }).isRequired,
 };
 
