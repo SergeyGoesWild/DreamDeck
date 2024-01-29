@@ -14,7 +14,7 @@
   height: 200px;
   display: block;
 }
-.cardbox {
+.card-box {
   display: none;
 }
 .search-container {
@@ -23,7 +23,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .cardbox {
+  .card-box {
     display: block;
   }
   .searchresult-container {

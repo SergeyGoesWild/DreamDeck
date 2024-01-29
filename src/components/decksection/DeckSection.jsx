@@ -1,7 +1,7 @@
 const DeckSection = () => {
   return (
     <div>
-      <div className="decksection">
+      <div className="deck-section">
         <div>choose your deck</div>
         <div className="decklist">
           <div>deck elec</div>
