@@ -7,18 +7,13 @@ import "./MainBody.css";
 
 const MainBody = ({ searchTerm, onSearchChange, cards }) => {
   return (
-    <div>
-      <div className="mainbody-container">
-        <div>
-          <SearchInput
-            searchTerm={searchTerm}
-            onSearchChange={onSearchChange}
-          />
-          <CardListBox cards={cards} />
-        </div>
-        <CardList cards={cards} />
-        <DeckSection />
+    <div className="mainbody-container">
+      <div>
+        <SearchInput searchTerm={searchTerm} onSearchChange={onSearchChange} />
+        <CardListBox cards={cards} />
       </div>
+      <CardList cards={cards} />
+      <DeckSection />
     </div>
   );
 };

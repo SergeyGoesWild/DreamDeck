@@ -4,10 +4,10 @@ import ToggleButton from "./ToggleButton.jsx";
 
 function Header() {
   return (
-    <div className="header">
+    <header className="header">
       <p className="logo-header">Logo-here</p>
       <ToggleButton className="toggle-button" />
-    </div>
+    </header>
   );
 }
 
