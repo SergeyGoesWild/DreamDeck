@@ -26,7 +26,8 @@ function App() {
         setData({ cards: cardsWithImages, loading: false });
         console.log(result); // a retirer
       })
-      .catch((error) => setData({ ...data, loading: false, error }));
+      .catch((error) => setData({ ...data, error }))
+      .finally(() => setData((prevData) => ({ ...prevData, loading: false })));
   }, []);
 
   useEffect(() => {
@@ -36,7 +37,7 @@ function App() {
       )
       .slice(0, batchSize);
     setDisplayedCards(filteredCards);
-  }, [searchTerm, data.cards]);
+  }, [searchTerm, data]);
 
   const loadMoreCards = () => {
     const newCards = data.cards
@@ -53,8 +54,11 @@ function App() {
     setSearchTerm(event.target.value);
   };
 
-  if (data.loading) return <div>Loading...</div>;
-  if (data.error) return <div>Error loading data.</div>;
+  if (data.loading) {
+    return <div>Loading...</div>;
+  } else if (data.error) {
+    return <div>Error loading data: {data.error}</div>;
+  }
 
   return (
     <>
