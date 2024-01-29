@@ -1,0 +1,14 @@
+.search-and-deck-tabs {
+    display: flex;
+    justify-content: space-around;
+}
+
+.content-search {
+    background-color: blueviolet;
+    height: 75vh;
+}
+
+.content-deck {
+    background-color: rgb(233, 167, 92);
+    height: 75vh;
+}
