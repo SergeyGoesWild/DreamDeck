@@ -6,12 +6,22 @@ import useInfiniteScroll from "./components/infinitescroll/useInfiniteScroll";
 import "./App.css";
 
 const url = "https://api.tcgdex.net/v2/en/cards";
+import './components/Header.css';
+import './components/Tabs.css';
 const batchSize = 100;
+import DeckTab from './components/DeckTab';
+import SearchTab from './components/SearchTab';
+import ContentSearch from './components/ContentSearch';
+import ContentDeck from "./components/ContentDeck";
 
 function App() {
   const [data, setData] = useState({ cards: [], loading: true, error: null });
   const [searchTerm, setSearchTerm] = useState("");
   const [displayedCards, setDisplayedCards] = useState([]);
+
+  const handleTabClick = (arg) => {
+    setActiveTab(arg);
+  };
 
   useEffect(() => {
     fetch(url)
@@ -63,6 +73,18 @@ function App() {
   return (
     <>
       <Header />
+      <div className="search-and-deck-tabs">
+        <div onClick={() => handleTabClick(1)}>
+        <SearchTab/>
+        </div>
+        <div onClick={() => handleTabClick(2)}>
+        <DeckTab/>
+        </div>
+      </div>
+      <div className="content-of-tab">
+      {activeTab === 1 && <ContentSearch/>}
+      {activeTab === 2 && <ContentDeck/>}
+      </div>
       <MainBody
         searchTerm={searchTerm}
         onSearchChange={handleSearchChange}
