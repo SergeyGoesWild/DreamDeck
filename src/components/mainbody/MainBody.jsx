@@ -1,21 +1,37 @@
+import { useState } from "react";
 import PropTypes from "prop-types";
-import SearchInput from "../searchsystem/SearchInput";
 import CardList from "../cardsystem/cardImg/CardList.jsx";
-import CardListBox from "../cardsystem/cardboxName/CardListBox";
-import DeckSection from "../decksection/DeckSection";
+import DeckTab from '/Users/youronlyfriend/Documents/WildCode/DreamDeck/src/components/DeckTab.jsx';
+import SearchTab from '/Users/youronlyfriend/Documents/WildCode/DreamDeck/src/components/SearchTab.jsx';
+import ContentSearch from '/Users/youronlyfriend/Documents/WildCode/DreamDeck/src/components/ContentSearch.jsx';
+import ContentDeck from "/Users/youronlyfriend/Documents/WildCode/DreamDeck/src/components/ContentDeck.jsx";
 import "./MainBody.css";
 
 const MainBody = ({ searchTerm, onSearchChange, cards }) => {
+  
+  const [activeTab, setActiveTab] = useState(1);
+
+  const handleTabClick = (arg) => {
+    setActiveTab(arg);
+  };
+
   return (
-    <>
-    <div className="searchbar">
-      <SearchInput searchTerm={searchTerm} onSearchChange={onSearchChange} />
-    </div><div className="mainbody-container">
-        <div>
-          <CardList cards={cards} />
+    <div className="mainbody-container">
+
+      <div className="search-and-deck-tabs">
+        <div onClick={() => handleTabClick(1)}>
+        <SearchTab/>
         </div>
-        <DeckSection />
-      </div></>
+        <div onClick={() => handleTabClick(2)}>
+        <DeckTab/>
+        </div>
+      </div>
+      <div className="content-of-tab">
+      {activeTab === 1 && <ContentSearch/>}
+      <CardList cards={cards} />
+      {activeTab === 2 && <ContentDeck/>}
+      </div>
+    </div>
   );
 };
 

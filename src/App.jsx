@@ -9,19 +9,11 @@ const url = "https://api.tcgdex.net/v2/en/cards";
 import './components/Header.css';
 import './components/Tabs.css';
 const batchSize = 100;
-import DeckTab from './components/DeckTab';
-import SearchTab from './components/SearchTab';
-import ContentSearch from './components/ContentSearch';
-import ContentDeck from "./components/ContentDeck";
 
 function App() {
   const [data, setData] = useState({ cards: [], loading: true, error: null });
   const [searchTerm, setSearchTerm] = useState("");
   const [displayedCards, setDisplayedCards] = useState([]);
-
-  const handleTabClick = (arg) => {
-    setActiveTab(arg);
-  };
 
   useEffect(() => {
     fetch(url)
@@ -72,6 +64,7 @@ function App() {
 
   return (
     <>
+      <Header />
       <MainBody
         searchTerm={searchTerm}
         onSearchChange={handleSearchChange}
