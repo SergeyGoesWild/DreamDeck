@@ -1,10 +1,11 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import DeckTab from '../DeckTab.jsx';
-import SearchTab from '../SearchTab.jsx';
-import ContentSearch from '../ContentSearch.jsx';
-import ContentDeck from "../ContentDeck.jsx";
+import DeckTab from '../tabs/DeckTab.jsx';
+import SearchTab from '../tabs/SearchTab.jsx';
+import ContentSearch from '../tabs/ContentSearch.jsx';
+import ContentDeck from "../tabs/ContentDeck.jsx";
 import "./MainBody.css";
+import "../tabs/Tabs.css";
 
 const MainBody = ( {searchTerm, onSearchChange, cards} ) => {
   

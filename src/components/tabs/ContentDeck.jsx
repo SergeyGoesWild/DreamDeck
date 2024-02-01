@@ -1,4 +1,4 @@
-import DeckSection from "./decksection/DeckSection.jsx";
+import DeckSection from "../decksection/DeckSection.jsx";
 
 function ContentDeck(){
     return (

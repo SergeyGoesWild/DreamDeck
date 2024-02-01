@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
-import Header from "./components/Header";
+import Header from "./components/header/Header";
 import FooterComponent from "./components/footercomponent/FooterComponent";
 import MainBody from "./components/mainbody/MainBody";
 import useInfiniteScroll from "./components/infinitescroll/useInfiniteScroll";
 import "./App.css";
 
 const url = "https://api.tcgdex.net/v2/en/cards";
-import './components/Header.css';
-import './components/Tabs.css';
+import './components/header/Header.css';
 const batchSize = 100;
 
 function App() {
