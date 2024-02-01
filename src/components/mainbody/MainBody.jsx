@@ -1,13 +1,12 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import CardList from "../cardsystem/cardImg/CardList.jsx";
-import DeckTab from '/Users/youronlyfriend/Documents/WildCode/DreamDeck/src/components/DeckTab.jsx';
-import SearchTab from '/Users/youronlyfriend/Documents/WildCode/DreamDeck/src/components/SearchTab.jsx';
-import ContentSearch from '/Users/youronlyfriend/Documents/WildCode/DreamDeck/src/components/ContentSearch.jsx';
-import ContentDeck from "/Users/youronlyfriend/Documents/WildCode/DreamDeck/src/components/ContentDeck.jsx";
+import DeckTab from '../DeckTab.jsx';
+import SearchTab from '../SearchTab.jsx';
+import ContentSearch from '../ContentSearch.jsx';
+import ContentDeck from "../ContentDeck.jsx";
 import "./MainBody.css";
 
-const MainBody = ({ searchTerm, onSearchChange, cards }) => {
+const MainBody = ( {searchTerm, onSearchChange, cards} ) => {
   
   const [activeTab, setActiveTab] = useState(1);
 
@@ -27,8 +26,7 @@ const MainBody = ({ searchTerm, onSearchChange, cards }) => {
         </div>
       </div>
       <div className="content-of-tab">
-      {activeTab === 1 && <ContentSearch/>}
-      <CardList cards={cards} />
+      {activeTab === 1 && <ContentSearch searchTerm={searchTerm} onSearchChange={onSearchChange} cards={cards}/>}
       {activeTab === 2 && <ContentDeck/>}
       </div>
     </div>

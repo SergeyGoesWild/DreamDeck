@@ -1,4 +1,4 @@
-import DeckSection from "/Users/youronlyfriend/Documents/WildCode/DreamDeck/src/components/decksection/DeckSection.jsx";
+import DeckSection from "./decksection/DeckSection.jsx";
 
 function ContentDeck(){
     return (
