@@ -1,7 +1,8 @@
-import SearchInput from "/Users/youronlyfriend/Documents/WildCode/DreamDeck/src/components/searchsystem/SearchInput.jsx";
-import CardListBox from "/Users/youronlyfriend/Documents/WildCode/DreamDeck/src/components/cardsystem/cardboxName/CardListBox.jsx";
+import SearchInput from "./searchsystem/SearchInput.jsx";
+import CardListBox from "./cardsystem/cardboxName/CardListBox.jsx";
+import CardList from "./cardsystem/cardImg/CardList";
 
-function ContentSearch(){
+function ContentSearch({ searchTerm, onSearchChange, cards }){
     return (
         <div className="content-search">
         <p>Content of SEARCH tab</p>
@@ -9,6 +10,7 @@ function ContentSearch(){
           <SearchInput searchTerm={searchTerm} onSearchChange={onSearchChange} />
           <CardListBox cards={cards} />
         </div>
+        <CardList cards={cards}/>
         </div>
     );
 };
