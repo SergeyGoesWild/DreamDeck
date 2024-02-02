@@ -1,0 +1,67 @@
+.addDeckBtn {
+    height: 25px;
+    width: 100%;
+    margin: 0.6rem;
+    background: rgba( 255, 255, 255, 0.1 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.addCardBtn {
+    height: 25px;
+    width: 100%;
+    margin: 0.6rem;
+    background: rgba( 255, 255, 255, 0.1 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.rmDeckBtn {
+        height: 25px;
+        width: 100%;
+        margin: 0.6rem;
+        background: rgba( 255, 255, 255, 0.1 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+    }
+
+    .rmCardBtn {
+        height: 25px;
+        width: 100%;
+        margin: 0.6rem;
+        background: rgba( 255, 255, 255, 0.1 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+    }
+
+    .deck-section {
+        padding: 1rem;
+        margin: 1rem;
+        text-align: center;
+        padding: 0.6rem;
+        margin: 0.6rem;
+        align-items: center;
+      }
+
+      .deckNameInput {
+        height: 25px;
+        width: 200px;
+        margin: 0.6rem;
+        background: rgba( 255, 255, 255, 0.1 );
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+      }
+
+      .deckNameInput[type=text] {
+        padding: 1rem;
+      }

@@ -1,0 +1,173 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+    /* NavBar */
+  
+  nav {
+    background: rgba( 255, 255, 255, 0 );
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    padding: 2rem;
+    display: inline;
+    margin-right: 15px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: whitesmoke;
+  }
+
+  /* Hero Section */
+  
+  .hero {
+    display: flex;
+    align-items: center; /* Center-align vertically */
+    justify-content: flex-start; /* Align to the right horizontally */
+    vertical-align: auto;
+    padding: 3rem;
+    transition: height 0.5s ease;
+    height: 400px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.hero-bg {
+width: 100%;
+background-image: url("./assets/hero-bg.jpg");
+background-size: cover;
+}
+
+.charizard,
+.pokeball {
+    position: absolute;
+    height: auto;
+    right: 0;
+    transition: height 0.5s ease;
+}
+
+.pokeball {
+    z-index: 3;
+}
+
+  /* Hero Responsive */
+
+  @media screen and (max-width: 768px) {
+    .hero {
+      height: 300px;
+    }
+  }
+
+@media screen and (max-width: 768px) {
+    .charizard,
+    .pokeball {
+        height: 10vh;
+    }
+
+    .charizard {
+        height: 40vh;
+    }
+}
+
+@media screen and (max-width: 660px) {
+  .charizard,
+  .pokeball {
+      height: 0;
+  }
+}
+
+    /* Floating CTA */
+
+  .btnDiv {
+    margin-top: -2rem;
+    padding-left: 2rem;
+    position: absolute;
+    z-index: 4;
+  }
+
+  .deckstart {
+    background: rgba( 158, 0, 255, 0.1 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    height: 60px;
+    width: 120px;
+    transition: height width 0.5s ease;
+  }
+
+      /* Floating CTA Responsive */
+
+
+    /* Coming Soon Section */
+
+.soon {
+  text-align: center;
+  padding: 5rem;
+  height: fit-content;
+  background-color: #101010;
+  position: relative;
+  z-index: -1;
+
+}
+
+    /* Carousel */
+
+
+    /* About Section */
+
+    .about {
+      text-align: center;
+      padding: 5rem;
+      height: 500px;
+      background-color: #c0baba;
+      position: relative;
+    
+    }
+
+  /* Footer Section */
+  
+  footer {
+    padding: 3rem;
+    text-align: center;
+    background: rgba( 255, 255, 255, 0 );
+    backdrop-filter: blur( 20px );
+    box-shadow: 0 8px 32px 0 rgb(0 0 0 / 37%);
+    -webkit-backdrop-filter: blur( 20px );
+  }
+  
+  @media only screen and (min-width: 768px) {
+    footer {
+      background: rgba( 255, 255, 255, 0 );
+      backdrop-filter: blur( 20px );
+      -webkit-backdrop-filter: blur( 20px );
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  
+    .footerContentContainer {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: nowrap;
+    }
+  }
+  

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './DeckSection.css'
 
 const initialDecks = [
   {
@@ -281,22 +282,23 @@ const DeckSection = () => {
     <div className="deck-section">
       <h2>Deck List</h2>
       <input
+      className='deckNameInput'
         type="text"
         value={newDeckName}
         onChange={(e) => setNewDeckName(e.target.value)}
         placeholder="New deck name"
       />
-      <button onClick={addDeck}>Add Deck</button>
+      <button className='addDeckBtn' onClick={addDeck}>Add Deck</button>
       <ul>
         {decks.map((deck) => (
           <li key={deck.id}>
             {deck.name}
-            <button onClick={() => removeDeck(deck.id)}>Remove Deck</button>
+            <button className='rmDeckBtn' onClick={() => removeDeck(deck.id)}>Remove Deck</button>
             <ul>
               {deck.cards.map((card) => (
                 <li key={card.id}>
                   {card.name}
-                  <button onClick={() => removeCardFromDeck(deck.id, card.id)}>
+                  <button className='rmCardBtn'onClick={() => removeCardFromDeck(deck.id, card.id)}>
                     Remove Card
                   </button>
                 </li>

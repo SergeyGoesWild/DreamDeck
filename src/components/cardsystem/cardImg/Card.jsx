@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { useState } from 'react';
-import Overlay from "/Users/dev/Desktop/DD-Dev/DreamDeck/src/components/overlay/Overlay.jsx"
+import Overlay from "/Users/dev/Desktop/DD-CSS/DreamDeck/src/components/overlay/Overlay.jsx"
 
 const Card = ({ card }) => {
 

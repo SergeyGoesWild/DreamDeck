@@ -18,12 +18,11 @@
   display: none;
 }
 .search-container {
+  height: 2rem;
   display: flex;
   justify-content: center;
 }
-.deck-section {
-  display: none;
-}
+
 @media only screen and (min-width: 768px) {
   .card-box {
     display: block;
@@ -42,6 +41,7 @@
     display: flex;
   }
   .search-container {
+    height: 2.5rem;
     display: flex;
     justify-content: flex-start;
   }
@@ -60,7 +60,6 @@
 
 .searchbar {
   margin: 0.5rem;
-  padding: 0.5rem;
   background: rgba( 255, 255, 255, 0.25 );
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 4px );
@@ -69,9 +68,20 @@
 }
 
 .search-input {
-
+    background: none;
+    border: none;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+}
+.search-input[type=text] {
+  padding: 1rem;
 }
 
 ul {
   list-style: none;
+}
+
+button {
+  border: none;
 }
