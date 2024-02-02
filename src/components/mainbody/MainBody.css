@@ -7,6 +7,7 @@
 .card {
   margin: 10px;
   text-align: center;
+  height: fit-content;
 }
 
 .card img {
@@ -28,9 +29,9 @@
   .card-box {
     display: block;
   }
-  .searchresult-container {
+  /* .searchresult-container {
     display: flex;
-  }
+  } */
   .mainbody-container {
     display: flex;
   }

@@ -9,12 +9,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --footer-background-color: #e40606;
+  --footer-background-color: #373737;
   --text-color: #000000;
   --dropdown-outline: #ccc;
-<<<<<<< HEAD
 }
-=======
-  --background-color: #242424;
-}
->>>>>>> a3b38b9 (Tabs done)
