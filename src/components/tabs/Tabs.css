@@ -3,10 +3,12 @@
     justify-content: space-around;
 }
 
-.content-search {
-    background-color: blueviolet;
-}
-
-.content-deck {
-    background-color: rgb(233, 167, 92);
+@media screen and (min-width: 768px) {
+    .content-search {
+        width: 20%;
+    }
+    
+    .content-deck {
+        width: 20%;
+    }
 }

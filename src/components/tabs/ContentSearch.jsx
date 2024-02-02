@@ -5,7 +5,6 @@ import CardList from "../cardsystem/cardImg/CardList.jsx";
 function ContentSearch({ searchTerm, onSearchChange, cards }){
     return (
         <div className="content-search">
-        <p>Content of SEARCH tab</p>
         <div>
           <SearchInput searchTerm={searchTerm} onSearchChange={onSearchChange} />
           <CardListBox cards={cards} />
