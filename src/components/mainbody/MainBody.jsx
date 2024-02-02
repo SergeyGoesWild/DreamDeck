@@ -13,7 +13,6 @@ const MainBody = ({ searchTerm, onSearchChange, cards }) => {
     </div><div className="mainbody-container">
         <div>
           <CardList cards={cards} />
-          {/* <CardListBox cards={cards} />*/}
         </div>
         <DeckSection />
       </div></>

@@ -62,7 +62,6 @@ function App() {
 
   return (
     <>
-      {/*<Header />*/}
       <MainBody
         searchTerm={searchTerm}
         onSearchChange={handleSearchChange}
