@@ -4,6 +4,7 @@ import FooterComponent from "./components/footercomponent/FooterComponent";
 import MainBody from "./components/mainbody/MainBody";
 import useInfiniteScroll from "./components/infinitescroll/useInfiniteScroll";
 import "./App.css";
+import { NavLink } from "react-router-dom";
 
 const url = "https://api.tcgdex.net/v2/en/cards";
 import './components/header/Header.css';
@@ -64,6 +65,11 @@ function App() {
   return (
     <>
       <Header />
+      <div>
+        <NavLink to="/">
+          <button>Go to Home</button>
+        </NavLink>
+      </div>
       <MainBody
         searchTerm={searchTerm}
         onSearchChange={handleSearchChange}
