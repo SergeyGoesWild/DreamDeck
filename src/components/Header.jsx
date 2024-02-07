@@ -6,6 +6,11 @@ function Header() {
   return (
     <header className="header">
       <p className="logo-header">Logo-here</p>
+      <div className="language-container">
+        <p>🇬🇧</p>
+        <p>🇫🇷</p>
+        <p>🇩🇪</p>
+      </div>
       <ToggleButton className="toggle-button" />
     </header>
   );

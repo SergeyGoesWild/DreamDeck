@@ -10,6 +10,19 @@
   align-self: center;
 }
 
+.language-container {
+  display: flex;
+  padding-right: 5vw;
+}
+
+.language-container p {
+  margin: 0 1vw 0 1vw;
+}
+
+.language-container p:hover {
+  cursor: pointer;
+}
+
 .overlay {
   position: absolute;
   top: 100%;
