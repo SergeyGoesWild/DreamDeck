@@ -1,0 +1,37 @@
+.addDeckBtn,
+.addCardbtn,
+.rmDeckBtn,
+.rmCardBtn {
+    height: 25px;
+    width: 80%;
+    margin: 0.6rem;
+    background: var(--glass-bg-color);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: var(--glass-box-border);
+}
+
+    .deck-section {
+        padding: 1rem;
+        margin: 1rem;
+        text-align: center;
+        padding: 0.6rem;
+        margin: 0.6rem;
+        align-items: center;
+      }
+
+      .deckNameInput {
+        height: 25px;
+        width: 200px;
+        margin: 0.6rem;
+        background: var(--glass-bg-color);
+        backdrop-filter: blur( 4px );
+        -webkit-backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: var(--glass-box-border);
+      }
+
+      .deckNameInput[type=text] {
+        padding: 1rem;
+      }
