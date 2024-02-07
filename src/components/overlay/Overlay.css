@@ -1,5 +1,5 @@
 .overlay__background {
-    background-color: rgba(var(--text-color), 0.7);
+    background-color: var(--overlay-bg-color);
     width: 100%;
     height: 100%;
     position: fixed;
@@ -42,14 +42,13 @@
   .overlay-content {
     display: flex;
     flex-direction: column;
-    background: rgba( 255, 255, 255, 0 );
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 20px );
-  -webkit-backdrop-filter: blur( 20px );
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
+    background: var(--glass-bg-color);
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border: var(--glass-box-border);
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--glass-box-shadow);
     height: fit-content;
     justify-content: center;
     overflow: auto;
@@ -61,27 +60,27 @@
   
   .overlay-content p {
     margin: 10px 0;
-    color:black
+    color:var(--text-color);
   }
   
   .overlay-content .attack {
     margin-top: 15px;
     border-top: 1px solid #ccc;
     padding-top: 15px;
-    color:black;
+    color:var(--text-color);
   }
   
   .overlay-content .attack strong {
-    color: black;
+    color: var(--text-color);
   }
   
   .overlay-content .attack p {
     margin: 5px 0;
-    color:black
+    color:var(--glass-box-border);
   }
   
   .overlay-content .attack p:first-child {
     margin-top: 0;
-    color: black;
+    color: var(--text-color);
   }
   
