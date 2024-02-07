@@ -104,11 +104,11 @@ background-size: cover;
   }
 
   .deckstart {
-    background: rgba( 158, 0, 255, 0.1 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    background: var(--glass-bg-color);
+    box-shadow: var(--glass-box-shadow);
     backdrop-filter: blur( 20px );
     -webkit-backdrop-filter: blur( 20px );
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: var(--glass-box-border);
     height: 60px;
     width: 120px;
     transition: height width 0.5s ease;
@@ -123,7 +123,7 @@ background-size: cover;
   text-align: center;
   padding: 5rem;
   height: fit-content;
-  background-color: #101010;
+  background-color: var(--background-color-soon);
   position: relative;
   z-index: -1;
 
@@ -138,7 +138,7 @@ background-size: cover;
       text-align: center;
       padding: 5rem;
       height: 500px;
-      background-color: #c0baba;
+      background-color: var(--background-color-about);
       position: relative;
     
     }
@@ -148,15 +148,15 @@ background-size: cover;
   footer {
     padding: 3rem;
     text-align: center;
-    background: rgba( 255, 255, 255, 0 );
+    background: var(--background-color-footer);
     backdrop-filter: blur( 20px );
-    box-shadow: 0 8px 32px 0 rgb(0 0 0 / 37%);
+    box-shadow: var(--glass-box-shadow);
     -webkit-backdrop-filter: blur( 20px );
   }
   
   @media only screen and (min-width: 768px) {
     footer {
-      background: rgba( 255, 255, 255, 0 );
+      background: var(--background-color-footer);
       backdrop-filter: blur( 20px );
       -webkit-backdrop-filter: blur( 20px );
       position: fixed;

@@ -30,7 +30,7 @@ const Homepage = () => {
       {/* Coming Soon */}
       <section className="soon">
         <h1>Coming Soon</h1>
-        <Slideshow></Slideshow>
+        <Slideshow />
       </section>
 
       {/* Footer */}
