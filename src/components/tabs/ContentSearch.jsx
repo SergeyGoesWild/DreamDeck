@@ -7,9 +7,8 @@ function ContentSearch({ searchTerm, onSearchChange, cards }){
         <div className="content-search">
         <div>
           <SearchInput searchTerm={searchTerm} onSearchChange={onSearchChange} />
-          <CardListBox cards={cards} />
         </div>
-        <CardList cards={cards}/>
+          <CardList cards={cards}/>
         </div>
     );
 };

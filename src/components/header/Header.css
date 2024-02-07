@@ -7,8 +7,16 @@
   flex: 1;
 }
 
+.logo-header:hover {
+  cursor: pointer;
+}
+
 .menu-icon {
   align-self: center;
+}
+
+.menu-icon:hover {
+  cursor: pointer;
 }
 
 .overlay {

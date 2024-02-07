@@ -3,12 +3,12 @@
     justify-content: space-around;
 }
 
-@media screen and (min-width: 768px) {
-    .content-search {
-        width: 20%;
-    }
+.deck-tab:hover {
+    cursor: pointer;
     
-    .content-deck {
-        width: 20%;
-    }
+}
+
+.search-tab:hover {
+    cursor: pointer;
+    
 }

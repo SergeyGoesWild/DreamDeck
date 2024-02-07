@@ -50,7 +50,7 @@ const MainBody = ( {searchTerm, onSearchChange, cards} ) => {
           <>
           
             <ContentSearch searchTerm={searchTerm} onSearchChange={onSearchChange} cards={cards}/>
-            <CardList cards={cards}/>
+            
             <ContentDeck/>
           
           </>

@@ -1,8 +1,11 @@
 import { useState } from "react";
+import "./Tabs.css";
 
 function SearchTab(){
     return(
-        <p>SEARCH</p>
+        <div className="search-tab">
+            <p>SEARCH</p>
+        </div>
     );
 };
 

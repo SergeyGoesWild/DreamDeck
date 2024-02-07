@@ -1,8 +1,11 @@
 import { useState } from "react";
+import "./Tabs.css";
 
 function DeckTab(){
     return (
-        <p>DECK</p>
+        <div className="deck-tab">
+            <p>DECK</p>
+        </div>
     );
 };
 
