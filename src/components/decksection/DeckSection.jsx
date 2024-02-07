@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './DeckSection.css'
 
 const initialDecks = [
   {
@@ -287,39 +288,37 @@ const DeckSection = () => {
     setDecks(updatedDecks);
   };
 
-            return (
-              <div className="deck-section">
-                <h2>Deck List</h2>
-                <input
-                  type="text"
-                  value={newDeckName}
-                  onChange={(e) => setNewDeckName(e.target.value)}
-                  placeholder="New deck name"
-                />
-                <button onClick={addDeck}>Add Deck</button>
-                <ul>
-                  {decks.map((deck) => (
-                    <li key={deck.id}>
-                      <div onClick={() => toggleDeckOpen(deck.id)}>
-                        {deck.name}
-                        <button onClick={() => removeDeck(deck.id)}>Remove Deck</button>
-                      </div>
-                      {deck.isOpen && (
-                        <ul>
-                          {deck.cards.map((card) => (
-                            <li key={card.id}>
-                              {card.name}
-                              <button onClick={() => removeCardFromDeck(deck.id, card.id)}>
-                                Remove Card
-                              </button>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            );
-          };
-            export default DeckSection;
+  return (
+    <div className="deck-section">
+      <h2>Deck List</h2>
+      <input
+      className='deckNameInput'
+        type="text"
+        value={newDeckName}
+        onChange={(e) => setNewDeckName(e.target.value)}
+        placeholder="New deck name"
+      />
+      <button className='addDeckBtn' onClick={addDeck}>Add Deck</button>
+      <ul>
+        {decks.map((deck) => (
+          <li key={deck.id}>
+            {deck.name}
+            <button className='rmDeckBtn' onClick={() => removeDeck(deck.id)}>Remove Deck</button>
+            <ul>
+              {deck.cards.map((card) => (
+                <li key={card.id}>
+                  {card.name}
+                  <button className='rmCardBtn' onClick={() => removeCardFromDeck(deck.id, card.id)}>
+                    Remove Card
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default DeckSection;

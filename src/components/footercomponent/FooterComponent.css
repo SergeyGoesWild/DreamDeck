@@ -1,24 +1,8 @@
 footer {
-  display: none;
+  height: 120px;
+  background: var(--background-color-footer);
+  box-shadow: var(--glass-box-shadow);
+  backdrop-filter: blur( 20px );
+  -webkit-backdrop-filter: blur( 20px );
 }
 
-@media only screen and (min-width: 768px) {
-  footer {
-    display: block;
-    background-color: var(--footer-background-color);
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-
-  .footerContentContainer {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: nowrap;
-
-    h3 {
-      color: var(--text-color);
-      margin: 10px;
-    }
-  }
-}
