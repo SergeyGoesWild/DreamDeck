@@ -20,7 +20,7 @@
     width: auto;
     margin-top: -22px;
     padding: 16px;
-    color: white;
+    color: var(--text-white);
     font-weight: bold;
     font-size: 20px;
     transition: 0.6s ease;

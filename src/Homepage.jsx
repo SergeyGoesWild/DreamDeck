@@ -20,8 +20,8 @@ const Homepage = () => {
       <div className='hero-bg'>
       <section className="hero">
         <h1>Build your dream Decks</h1>   
-        <img className= "charizard" src="src/assets/charlizard 1.png"></img>
-        <img className= "pokeball" src="src/assets/pokeball2 1.png"></img>
+        <img className= "charizard" src="src/assets/charlizard.png"/>
+        <img className= "pokeball" src="src/assets/pokeball.png"/>
       </section>
       </div>
     <div className="btnDiv">

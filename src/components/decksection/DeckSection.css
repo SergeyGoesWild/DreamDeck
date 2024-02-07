@@ -25,11 +25,11 @@
         height: 25px;
         width: 200px;
         margin: 0.6rem;
-        background: rgba( 255, 255, 255, 0.1 );
+        background: var(--glass-bg-color);
         backdrop-filter: blur( 4px );
         -webkit-backdrop-filter: blur( 4px );
         border-radius: 10px;
-        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        border: var(--glass-box-border);
       }
 
       .deckNameInput[type=text] {

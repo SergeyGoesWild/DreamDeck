@@ -65,7 +65,7 @@
   
   .overlay-content .attack {
     margin-top: 15px;
-    border-top: 1px solid #ccc;
+    border-top: var(--glass-box-border);
     padding-top: 15px;
     color:var(--text-color);
   }
