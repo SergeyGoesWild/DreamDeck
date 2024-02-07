@@ -1,22 +1,22 @@
 .header {
   display: flex;
-  margin: 3vh 2vh;
+  margin: 15px 10px;
 }
 
 .logo-header {
   flex: 1;
-}
 
-.logo-header:hover {
-  cursor: pointer;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .menu-icon {
   align-self: center;
-}
 
-.menu-icon:hover {
-  cursor: pointer;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .overlay {

@@ -48,11 +48,8 @@ const MainBody = ( {searchTerm, onSearchChange, cards} ) => {
         ) :
         (
           <>
-          
             <ContentSearch searchTerm={searchTerm} onSearchChange={onSearchChange} cards={cards}/>
-            
             <ContentDeck/>
-          
           </>
         ) }
     </div>

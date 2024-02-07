@@ -4,9 +4,9 @@ import FooterComponent from "./components/footercomponent/FooterComponent";
 import MainBody from "./components/mainbody/MainBody";
 import useInfiniteScroll from "./components/infinitescroll/useInfiniteScroll";
 import "./App.css";
+import './components/header/Header.css';
 
 const url = "https://api.tcgdex.net/v2/en/cards";
-import './components/header/Header.css';
 const batchSize = 100;
 
 function App() {
@@ -25,7 +25,6 @@ function App() {
             image: `${card.image}/low.webp`,
           }));
         setData({ cards: cardsWithImages, loading: false });
-        console.log(result); // a retirer
       })
       .catch((error) => setData({ ...data, error }))
       .finally(() => setData((prevData) => ({ ...prevData, loading: false })));
