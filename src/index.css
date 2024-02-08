@@ -3,14 +3,13 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --footer-background-color: #e40606;
+  --footer-background-color: #373737;
   --text-color: #000000;
   --text-white: white;
   --dropdown-outline: #ccc;
@@ -23,4 +22,5 @@
   --glass-box-border: 1px solid rgba( 255, 255, 255, 0.18 );
   --overlay-bg-color: rgba(11, 11, 11, 0.3);
   --border-radius: 8px;
+  --background-color: #242424;
 }

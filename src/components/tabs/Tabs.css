@@ -1,0 +1,14 @@
+.search-and-deck-tabs {
+    display: flex;
+    justify-content: space-around;
+}
+
+.deck-tab:hover {
+    cursor: pointer;
+    
+}
+
+.search-tab:hover {
+    cursor: pointer;
+    
+}

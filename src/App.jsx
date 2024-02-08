@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
-import Header from "./components/Header";
+import Header from "./components/header/Header";
 import FooterComponent from "./components/footercomponent/FooterComponent";
 import MainBody from "./components/mainbody/MainBody";
 import useInfiniteScroll from "./components/infinitescroll/useInfiniteScroll";
 import "./App.css";
+import './components/header/Header.css';
 
 const url = "https://api.tcgdex.net/v2/en/cards";
 const batchSize = 100;
@@ -24,7 +25,6 @@ function App() {
             image: `${card.image}/low.webp`,
           }));
         setData({ cards: cardsWithImages, loading: false });
-        console.log(result); // a retirer
       })
       .catch((error) => setData({ ...data, error }))
       .finally(() => setData((prevData) => ({ ...prevData, loading: false })));
@@ -62,6 +62,7 @@ function App() {
 
   return (
     <>
+      <Header />
       <MainBody
         searchTerm={searchTerm}
         onSearchChange={handleSearchChange}

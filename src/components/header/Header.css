@@ -1,13 +1,22 @@
 .header {
   display: flex;
+  margin: 15px 10px;
 }
 
 .logo-header {
   flex: 1;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .menu-icon {
   align-self: center;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .overlay {
@@ -24,8 +33,8 @@
 
 .dropdown-list {
   list-style-type: none;
-  padding: 0;
-  margin: 0;
+  padding: 0.5rem;
+  background-color: var(--background-color);
 }
 
 @media screen and (min-width: 768px) {

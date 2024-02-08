@@ -23,20 +23,11 @@
   display: flex;
   justify-content: center;
 }
-
 @media only screen and (min-width: 768px) {
   .card-box {
     display: block;
   }
-  .searchresult-container {
-    display: flex;
-    background: var(--glass-bg-color);
-    box-shadow: var(--glass-box-shadow);
-    border-radius: 10px;
-    border: var(--glass-box-border);
-    padding: 0.5rem;
-    margin: 0.5rem;
-  }
+
   .mainbody-container {
     display: flex;
   }
