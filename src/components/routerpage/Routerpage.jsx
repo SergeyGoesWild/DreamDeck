@@ -1,6 +1,6 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import ErrorPage from "../errorpage/ErrorPage";
+import Errorpage from "../errorpage/Errorpage";
 import App from "../../App";
 
 function Routerpage(){
@@ -8,12 +8,12 @@ function Routerpage(){
         {
             path:"/",
             element: <Homepage/>,
-            errorElement: <ErrorPage/>
+            errorElement: <Errorpage/>
         },
         {
             path:"/app",
             element: <App/>,
-            errorElement: <ErrorPage/>
+            errorElement: <Errorpage/>
         }
     ]);
     return (

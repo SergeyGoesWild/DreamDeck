@@ -3,6 +3,7 @@
 import React from 'react';
 import './Homepage.css'
 import Slideshow from './components/Slideshow';
+import { NavLink } from "react-router-dom";
 
 const Homepage = () => {
   return (
@@ -25,7 +26,9 @@ const Homepage = () => {
       </section>
       </div>
     <div className="btnDiv">
-    <button className="deckstart"><span>Start a deck</span></button>
+      <NavLink to="/app">
+        <button className="deckstart"><span>Start a deck</span></button>
+      </NavLink>
     </div>
       {/* Coming Soon */}
       <section className="soon">
