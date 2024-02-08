@@ -34,7 +34,13 @@ body {
     text-decoration: none;
     color: whitesmoke;
   }
-
+  .nav-link {
+    padding: 2rem;
+    display: inline;
+    margin-right: 15px;
+    text-decoration: none;
+    color: inherit;
+  }
   /* Hero Section */
   
   .hero {

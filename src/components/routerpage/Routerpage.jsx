@@ -3,20 +3,37 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Errorpage from "../errorpage/Errorpage";
 import App from "../../App";
 import Homepage from "../../Homepage.jsx"
+import Root from "../root/Root.jsx";
+import Contact from "../Contact/Contact.jsx";
+import About from "../About/About.jsx";
 
 function Routerpage(){
     const router = createBrowserRouter([
         {
-            path:"/home",
-            element: <Homepage/>,
-            errorElement: <Errorpage/>
+            path:"/",
+            element: <Root/>,
+            errorElement: <Errorpage/>,
+            children: [
+                {
+                    path:"",
+                    element: <Homepage/>
+                },
+                {
+                    path:"/contact",
+                    element: <Contact/>
+                },
+                {
+                    path:"/about",
+                    element: <About/>
+                },
+            ]
         },
         {
-            path:"/app",
-            element: <App/>,
-            errorElement: <Errorpage/>
+            path:"/pokemondeck",
+            element: <App/>
         }
     ]);
+
     return (
         <RouterProvider router={router}/>
     );

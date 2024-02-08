@@ -7,7 +7,7 @@ function Header() {
   return (
     <header className="header">
       <div className="logo-container">
-      <NavLink to="/home">
+      <NavLink to="/">
         <img className="logo-image" src="./src/assets/DreamDeckLogoTransparent.png" alt="DreamDeck logo" />
       </NavLink>
       </div>
