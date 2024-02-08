@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Header.css";
+import { NavLink } from "react-router-dom";
 
 function ToggleButton() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,9 +21,12 @@ function ToggleButton() {
       {isOpen && (
         <div className="overlay">
           <ul className="dropdown-list">
-            <li>About Us</li>
-            <li>Legal</li>
-            <li>Contact</li>
+            <NavLink to="/about" className="toggle-link">
+              <li className="toggle-text">About</li>
+            </NavLink>
+            <NavLink to="/contact" className="toggle-link">
+              <li className="toggle-text">Contact</li>
+            </NavLink>
           </ul>
         </div>
       )}

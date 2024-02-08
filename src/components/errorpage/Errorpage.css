@@ -1,0 +1,22 @@
+.error-title {
+    text-align: center;
+    margin-bottom: 8vh;
+}
+
+.error-image-container{
+    display: flex;
+    justify-content: center;
+}
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.error-img {
+    width: 45vh;
+}
+

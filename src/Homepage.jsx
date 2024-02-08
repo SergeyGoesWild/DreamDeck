@@ -3,19 +3,12 @@
 import React from 'react';
 import './Homepage.css'
 import Slideshow from './components/Slideshow';
+import { NavLink } from "react-router-dom";
 
 const Homepage = () => {
   return (
     <div>
-      {/* Navigation Section */}
-      <nav className="navMenu">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-
+      
       {/* Hero Section */}
       <div className='hero-bg'>
       <section className="hero">
@@ -25,7 +18,9 @@ const Homepage = () => {
       </section>
       </div>
     <div className="btnDiv">
-    <button className="deckstart"><span>Start a deck</span></button>
+      <NavLink to="/pokemondeck" className="deckstart">
+        <button className="deckstart"><span>Start a deck</span></button>
+      </NavLink>
     </div>
       {/* Coming Soon */}
       <section className="soon">

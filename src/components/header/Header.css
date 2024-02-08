@@ -3,9 +3,12 @@
   margin: 15px 10px;
 }
 
-.logo-header {
+.logo-container {
   flex: 1;
+}
 
+.logo-image {
+  width: 70px;
   &:hover {
     cursor: pointer;
   }
@@ -37,6 +40,15 @@
   background-color: var(--background-color);
 }
 
+.toggle-link{
+    text-decoration: none;
+    color: inherit;
+}
+
+.toggle-text {
+  padding: 10px;
+}
+
 @media screen and (min-width: 768px) {
   .menu-icon {
     display: none;
@@ -44,5 +56,9 @@
 
   .dropdown {
     display: none;
+  }
+
+  .logo-image {
+    width: 90px;
   }
 }
