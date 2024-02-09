@@ -5,15 +5,15 @@ export function Overlay({ isOpen, onClose, children }) {
     <>
       {isOpen && (
         <div className="overlay">
-          <div className="overlay__background" onClick={onClose} />
+          <span className="overlay__background" onClick={onClose} />
           <div className="overlay__container">
-            <div className="overlay__controls">
+          <span className="overlay__controls">
               <button
                 className="overlay__close"
                 type="button"
                 onClick={onClose}
               />
-            </div>
+            </span>
             {children}
           </div>
         </div>

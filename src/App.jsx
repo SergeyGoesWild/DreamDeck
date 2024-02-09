@@ -22,7 +22,7 @@ function App() {
           .filter((card) => card.image)
           .map((card) => ({
             ...card,
-            image: `${card.image}/low.webp`,
+            lowResolutionImage: `${card.image}/low.webp`,
           }));
         setData({ cards: cardsWithImages, loading: false });
       })
