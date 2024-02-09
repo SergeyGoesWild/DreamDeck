@@ -4,7 +4,7 @@ import "./Tabs.css";
 function SearchTab(){
     return(
         <div className="search-tab">
-            <p>SEARCH</p>
+            <p>Search</p>
         </div>
     );
 };

@@ -68,7 +68,6 @@ function App() {
         onSearchChange={handleSearchChange}
         cards={displayedCards}
       />
-      <FooterComponent />
     </>
   );
 }

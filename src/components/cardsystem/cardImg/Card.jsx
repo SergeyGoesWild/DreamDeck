@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { useState } from 'react';
 import Overlay from "../../overlay/Overlay"
-
+import "./Card.css"
 const Card = ({ card }) => {
 
   // Overlay
@@ -12,8 +12,8 @@ const Card = ({ card }) => {
   };
 
   return (
-    <div className="card">
-      <img onClick={toggleOverlay} src={card.image} alt={card.name} />
+    <div>
+      <img onClick={toggleOverlay} src={card.image} alt={card.name} className="card-container-img"/>
       <Overlay isOpen={isOpen} onClose={toggleOverlay}>
       <img src={card.image} alt={card.name} />
       </Overlay>

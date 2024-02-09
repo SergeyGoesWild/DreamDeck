@@ -4,7 +4,7 @@ import "./Tabs.css";
 function DeckTab(){
     return (
         <div className="deck-tab">
-            <p>DECK</p>
+            <p>Deck</p>
         </div>
     );
 };
