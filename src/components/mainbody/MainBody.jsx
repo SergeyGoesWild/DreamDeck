@@ -9,7 +9,7 @@ import "./MainBody.css";
 import { useState, useEffect } from "react";
 
 const MainBody = ({ searchTerm, onSearchChange, cards, decks }) => {
-    const [smallScreen, setSmallScreen] = useState(true);
+    const [smallScreen, setSmallScreen] = useState(window.innerWidth < 768);
     const [activeTab, setActiveTab] = useState("search");
     const handleClick = (tab) => {
         setActiveTab(tab);
