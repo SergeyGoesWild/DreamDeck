@@ -7,6 +7,6 @@ function SearchTab(){
             <p>SEARCH</p>
         </div>
     );
-};
+}
 
 export default SearchTab;
